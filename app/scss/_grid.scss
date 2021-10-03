@@ -1,15 +1,13 @@
 .container {
   max-width: $maxWidthContainer + px;
   width: 100%;
-  padding: 0 15px;
   margin: 0 auto;
-  @media (max-width: $md0+px) {
-    max-width: 1200px;
-  }
   @media (max-width: $md1+px) {
     max-width: 768px;
+    padding: 0 30px;
   }
   @media (max-width: $md2+px) {
     max-width: 100%;
+    padding: 0 10px;
   }
 }

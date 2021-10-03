@@ -7,8 +7,6 @@ const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const imagemin     = require('gulp-imagemin');
-const webpHTML     = require('gulp-webp-html');
-const webpImg      = require('gulp-webp');
 const fileinclude = require('gulp-file-include');
 const htmlhint = require("gulp-htmlhint");
 const htmlbeautify = require('gulp-html-beautify');
@@ -53,7 +51,6 @@ function htmlRun() {
 				prefix: '@@',
 				basepath: '@file'
 			}))
-			.pipe(webpHTML())
 			.pipe(htmlhint())
 			.pipe(htmlbeautify(options))
 			.pipe(dest('../dist'));
@@ -65,7 +62,7 @@ function scripts() {
 		'../app/assets/js/main.js'
 	])
 	.pipe(concat('main.min.js'))
-	//.pipe(uglify())
+	.pipe(uglify())
 	.pipe(dest('../dist/assets/js/'))
 	.pipe(browserSync.stream())
 }
@@ -94,8 +91,6 @@ function images() {
 			})
 		]))
 		.pipe(dest('../dist/assets/img'))
-		// .pipe(webpImg())
-		// .pipe(dest('../dist/assets/img'))
 }
 
 // В Билде: Удаляем старую папку dist
