@@ -16,8 +16,8 @@
 @import "interface/header"; // Шапка сайта
 @import "interface/footer"; // Подвал сайта
 
-@import "interface/_button.scss";
-@import "interface/_form.scss";
-@import "interface/_popup.scss";
+@import "interface/_button.scss"; // Общии стили кнопок
+@import "interface/_form.scss";   // Общии стили форм
+@import "interface/_popup.scss";  // Общии стили всплывашек
 
 //? ====== Блоки и страницы ======================

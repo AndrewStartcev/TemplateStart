@@ -1,5 +1,4 @@
-
-
+// ======== Скрипты ==========================
 
 // ======== Маска для телефона ===============
 document.addEventListener("DOMContentLoaded", function () {
