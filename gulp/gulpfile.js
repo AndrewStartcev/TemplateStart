@@ -21,8 +21,8 @@ function browsersync() {
 // В слежении: scss + autprefix > css
 function styles() {
   return src("../app/scss/style.scss")
-    .pipe(scss({ outputStyle: "expanded" }))
-    .pipe(concat("style.css"))
+    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 10 version"],
@@ -34,7 +34,11 @@ function styles() {
 }
 
 function stylesVendor() {
-  return src("../app/assets/library/**/*.css").pipe(concat("vendor.css")).pipe(dest("../dist/assets/library")).pipe(browserSync.stream());
+  return src("../app/assets/library/**/*.css")
+    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(concat("vendor.min.css"))
+    .pipe(dest("../dist/assets/library"))
+    .pipe(browserSync.stream());
 }
 
 function htmlRun() {
@@ -56,10 +60,10 @@ function htmlRun() {
 
 // В слежении: js > js.min
 function scripts() {
-  return src(["../app/assets/js/main.js"]).pipe(concat("main.js")).pipe(uglify()).pipe(dest("../dist/assets/js")).pipe(browserSync.stream());
+  return src(["../app/assets/js/main.js"]).pipe(concat("main.min.js")).pipe(uglify()).pipe(dest("../dist/assets/js")).pipe(browserSync.stream());
 }
 function scriptsVendor() {
-  return src(["../app/assets/library/**/*"]).pipe(concat("vendor.js")).pipe(uglify()).pipe(dest("../dist/assets/library")).pipe(browserSync.stream());
+  return src(["../app/assets/library/**/*"]).pipe(concat("vendor.min.js")).pipe(uglify()).pipe(dest("../dist/assets/library")).pipe(browserSync.stream());
 }
 
 // В слежении: Оптимизация картинок
