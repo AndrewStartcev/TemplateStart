@@ -1,31 +1,31 @@
 /* Обнуление стилей */
 * {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  -webkit-tap-highlight-color: transparent;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	-webkit-tap-highlight-color: transparent;
 }
 
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :focus,
 :active {
-  outline: none;
+	outline: none;
 }
 
 a:focus,
 a:active {
-  outline: none;
+	outline: none;
 }
 
 a {
-  color: inherit;
+	color: inherit;
 }
 
 aside,
@@ -33,51 +33,54 @@ nav,
 footer,
 header,
 section {
-  display: block;
+	display: block;
 }
 
 html,
 body {
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
+	height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
 }
 
 body {
-  line-height: 1;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 input::-ms-clear {
-  display: none;
+	display: none;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
 
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul li {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  vertical-align: top;
+	vertical-align: top;
+	height: auto;
+	object-fit: contain;
+	max-height: 100%;
 }
 
 h1,
@@ -86,68 +89,68 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
-  font-size: inherit;
+	font-weight: inherit;
+	font-size: inherit;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
-input[type="text"]::-ms-clear {
-  display: none;
-  width: 0;
-  height: 0;
+input[type='text']::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
 }
 
-input[type="text"]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+input[type='text']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
 }
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
-  display: none;
+	display: none;
 }
 
-input[type="search"] {
-  border-width: 0px;
-  border: 0;
-  background: transparent;
-  outline: none;
-  border-radius: 0;
+input[type='search'] {
+	border-width: 0px;
+	border: 0;
+	background: transparent;
+	outline: none;
+	border-radius: 0;
 
-  &:focus,
-  &:hover,
-  &:active {
-    outline: none;
-  }
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none;
+	}
 }
 
 input,
 button,
 textarea {
-  -webkit-border-radius:0;
-  border-radius:0;
-  font-family: inherit;
-  border-width: 0px;
-  border: none;
-  background: transparent;
-  outline: none;
-  border-radius: 0;
-  -webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	font-family: inherit;
+	border-width: 0px;
+	border: none;
+	background: transparent;
+	outline: none;
+	border-radius: 0;
+	-webkit-appearance: none;
 }
 
 textarea {
-  resize: none;
+	resize: none;
 }
 
 /* END Обнуление стилей */

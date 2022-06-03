@@ -1,7 +1,9 @@
 //* ###### Переменные стилей ##############
 //? ====== Подключение шрифтов ============
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Russo+One&display=swap');
 
-$fontFamily: "Arial", sans-serif;
+$fontFamily: 'Montserrat', sans-serif;
+$fontHeading: 'Russo One', sans-serif;
 
 //? ====== Контейнер ======================
 $maxWidth: 1920; // Не меняем.
@@ -11,8 +13,7 @@ $md2: 767.98;
 
 //? ====== Цвета ==========================
 $black: #000000;
-$white: #FFFFFF;
-
+$white: #ffffff;
 
 //? ====== Наборы стилей ==================
 

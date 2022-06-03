@@ -11,96 +11,101 @@ const htmlbeautify = require("gulp-html-beautify");
 
 // В слежении: Запуск локального сервера
 function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: "../dist/",
-    },
-  });
+    browserSync.init({
+        server: {
+            baseDir: "../dist/",
+        },
+    });
 }
 
 // В слежении: scss + autprefix > css
 function styles() {
-  return src("../app/scss/style.scss")
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(concat("style.min.css"))
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 10 version"],
-        grid: true,
-      })
-    )
-    .pipe(dest("../dist/assets/css"))
-    .pipe(browserSync.stream());
+    return src("../app/scss/style.scss")
+        .pipe(scss({ outputStyle: "compressed" }))
+        .pipe(concat("style.min.css"))
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 10 version"],
+                grid: true,
+            })
+        )
+        .pipe(dest("../dist/assets/css"))
+        .pipe(browserSync.stream());
 }
 
 function stylesVendor() {
-  return src("../app/assets/library/**/*.css")
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(concat("vendor.min.css"))
-    .pipe(dest("../dist/assets/library"))
-    .pipe(browserSync.stream());
+    return src("../app/assets/library/**/*.css")
+        .pipe(scss({ outputStyle: "compressed" }))
+        .pipe(concat("vendor.min.css"))
+        .pipe(dest("../dist/assets/library"))
+        .pipe(browserSync.stream());
 }
 
 function htmlRun() {
-  const options = {
-    indent_size: 2,
-    inline: "body",
-  };
-  return src("../app/*.html")
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-      })
-    )
-    .pipe(htmlhint())
-    .pipe(htmlbeautify(options))
-    .pipe(dest("../dist"));
+    const options = {
+        indent_size: 2,
+        inline: "body",
+    };
+    return src("../app/*.html")
+        .pipe(
+            fileinclude({
+                prefix: "@@",
+                basepath: "@file",
+            })
+        )
+        .pipe(htmlhint())
+        .pipe(htmlbeautify(options))
+        .pipe(dest("../dist"));
 }
 
 // В слежении: js > js.min
 function scripts() {
-  return src(["../app/assets/js/main.js"]).pipe(concat("main.min.js")).pipe(uglify()).pipe(dest("../dist/assets/js")).pipe(browserSync.stream());
+    return src(["../app/assets/js/main.js"]).pipe(concat("main.min.js")).pipe(uglify()).pipe(dest("../dist/assets/js")).pipe(browserSync.stream());
 }
 function scriptsVendor() {
-  return src(["../app/assets/library/**/*"]).pipe(concat("vendor.min.js")).pipe(uglify()).pipe(dest("../dist/assets/library")).pipe(browserSync.stream());
+    return src(["../app/assets/library/**/*"]).pipe(concat("vendor.min.js")).pipe(uglify()).pipe(dest("../dist/assets/library")).pipe(browserSync.stream());
 }
 
 // В слежении: Оптимизация картинок
 function images() {
-  return src("../app/assets/img/**/*")
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-        }),
-      ])
-    )
-    .pipe(dest("../dist/assets/img"));
+    return src("../app/assets/img/**/*")
+        .pipe(
+            imagemin([
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.mozjpeg({ quality: 75, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 5 }),
+                imagemin.svgo({
+                    plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+                }),
+            ])
+        )
+        .pipe(dest("../dist/assets/img"));
 }
 
 // В Билде: Удаляем старую папку dist
 function cleanDist() {
-  return del("../dist");
+    return del("../dist");
 }
 
 // В Билде: Перемещаем файлы в папку dist
-function build() {
-  return src(["../app/assets/fonts/**/*", "../app/assets/php/**/*"]).pipe(dest("../dist"));
+function buildFonts() {
+    return src(["../app/assets/fonts/*"]).pipe(dest("../dist/assets/fonts/"));
+}
+
+function buildPhp() {
+    return src(["../app/assets/php/*"]).pipe(dest("../dist/assets/php/"));
 }
 // В слежении: Следим за изменением файлов в этих папках
 function watching() {
-  watch(["../app/assets/**/*"], build);
-  watch(["../app/scss/**/*.scss"], styles);
-  watch(["../app/assets/library/**/*.css"], stylesVendor);
-  watch(["../app/assets/img/**/*"], images);
-  watch(["../app/**/*.html"], htmlRun);
-  watch(["../app/assets/js/*.js"], scripts);
-  watch(["../app/assets/library/**/*.js"], scriptsVendor);
-  watch(["../app/**/*.html"]).on("change", browserSync.reload);
+    watch(["../app/assets/fonts/**/*"], buildFonts);
+    watch(["../app/assets/php/**/*"], buildPhp);
+    watch(["../app/scss/**/*.scss"], styles);
+    watch(["../app/assets/library/**/*.css"], stylesVendor);
+    watch(["../app/assets/img/**/*"], images);
+    watch(["../app/**/*.html"], htmlRun);
+    watch(["../app/assets/js/*.js"], scripts);
+    watch(["../app/assets/library/**/*.js"], scriptsVendor);
+    watch(["../app/**/*.html"]).on("change", browserSync.reload);
 }
 
 exports.browsersync = browsersync;
@@ -114,4 +119,4 @@ exports.watching = watching;
 exports.cleanDist = cleanDist;
 
 // gulp Запускаем работу галпа.
-exports.default = parallel(styles, stylesVendor, scripts, scriptsVendor, images, build, htmlRun, watching, browsersync);
+exports.default = parallel(styles, stylesVendor, scripts, scriptsVendor, images, buildFonts, buildPhp, htmlRun, watching, browsersync);
