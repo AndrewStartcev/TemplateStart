@@ -2,6 +2,10 @@
 $('.burger').click(function () {
     $(this).toggleClass('show')
     $('.menu-mobile').toggleClass('show')
+});
+$('.menu-item, .menu-mobile a').click(function () {
+    $(this).removeClass('show')
+    $('.menu-mobile').removeClass('show')
 })
 
 // ======== Маска для телефона ===============
@@ -75,3 +79,33 @@ document.addEventListener("DOMContentLoaded", function () {
         phoneInput.addEventListener('paste', onPhonePaste, false);
     }
 })
+
+
+const swiperFooter = new Swiper('.footer-top__slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.footer-top__btn--next',
+        prevEl: '.footer-top__btn--prev',
+    },
+
+    scrollbar: {
+        el: '.footer-top__scrollbar',
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        1220: {
+            slidesPerView: 3,
+            spaceBetween: 55
+        }
+    }
+});
