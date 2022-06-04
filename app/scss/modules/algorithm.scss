@@ -1,0 +1,134 @@
+.algorithm {
+	padding-bottom: 100px;
+	&__card {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		border-radius: 15px;
+		background: #242324 url('../img/bg/tile-map-dark.jpg');
+		color: #fff;
+		&::after {
+			content: '';
+			display: block;
+			width: 587px;
+			height: 80px;
+			position: absolute;
+			left: -10px;
+			top: -20px;
+			background: url('../img/text/blackbox_white.svg') center center / contain no-repeat;
+		}
+	}
+
+	&__content {
+		padding: 156px 0px 65px 30px;
+	}
+
+	&__list {
+		position: relative;
+		z-index: 1;
+		li {
+			margin-bottom: 27px;
+			padding-left: 70px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 95%;
+			position: relative;
+			min-height: 25px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 50px;
+				height: 25px;
+				background: #feed21;
+				box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: -1px;
+				left: 23px;
+				display: block;
+				width: 27px;
+				height: 27px;
+				background: radial-gradient(50% 50% at 50% 50%, #ffffff 43.75%, #bdbdbd 100%);
+				box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.15);
+				border-radius: 100px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__images {
+		padding: 40px 30px 0px 0px;
+		img {
+			max-width: 481px;
+			width: auto;
+		}
+	}
+
+	&__title {
+		font-family: $fontHeading;
+		text-align: right;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 48px;
+	}
+}
+
+@media (max-width: ($md1+px)) {
+	.algorithm {
+		&__images {
+			padding-top: 70px;
+			img {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: ($md2+px)) {
+	.algorithm {
+		&__card {
+			padding: 60px 21px 34px 30px;
+			flex-direction: column-reverse;
+			&::after {
+				width: 80%;
+			}
+		}
+
+		&__content {
+			padding: 0;
+		}
+
+		&__list {
+			li {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__images {
+			padding: 0;
+			img {
+				display: none;
+			}
+		}
+
+		&__title {
+			font-size: 35px;
+			line-height: 95%;
+			margin-bottom: 15px;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.marketplace {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 50px 0px;
+	background: linear-gradient(273.18deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 52.63%),
+		radial-gradient(
+				45.63% 56.25% at 60.75% 43.75%,
+				rgba(173, 173, 173, 0.2) 0%,
+				rgba(130, 119, 130, 0.2) 0.01%,
+				rgba(89, 84, 89, 0) 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+		linear-gradient(92.6deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 62.81%), #242324;
+	border-radius: 15px;
+	&__item {
+		position: relative;
+		padding: 0px 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::after {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 100px;
+			background: #fefdf5;
+			opacity: 0.2;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	img {
+		max-width: 180px;
+		width: 100%;
+	}
+}
+@media (max-width: ($md1+px)) {
+	.marketplace {
+		padding: 30px 0px;
+		&__item {
+			padding: 0px 20px;
+			&::after {
+				height: 70px;
+			}
+		}
+	}
+}
+@media (max-width: ($md2+px)) {
+	.marketplace {
+		padding: 20px 0px;
+		&__item {
+			padding: 0px 10px;
+			&::after {
+				height: 35px;
+			}
+		}
+	}
+}

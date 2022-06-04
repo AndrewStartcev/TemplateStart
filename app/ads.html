@@ -12,254 +12,92 @@
 
 <body class="page" id="top">
     <div class="page__wrapper">
-        <header class="header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="header-top__wrapper">
-                        <a href="#" class="header-top__logo">
-                            <img src="assets/img/logo.png" alt="">
-                        </a>
-                        <div class="header-top__social header-social">
-                            <a href="#" target="_blank" class="header-social__link">
-                                <img src="assets/img/icons/vk_icon.svg" alt="">
-                            </a>
-                            <a href="#" target="_blank" class="header-social__link">
-                                <img src="assets/img/icons/instagram_icon.svg" alt="">
-                            </a>
-                            <a href="#" target="_blank" class="header-social__link">
-                                <img src="assets/img/icons/whatsapp_icon.svg" alt="">
-                            </a>
-                        </div>
-                        <a href="tel:+79191557210" class="header-top__tel">+7 919 155 72 10</a>
-                        <button class="header-top__burger burger">
-                            <span></span>
-                            <span></span>
-                            <span><i></i><i></i></span>
-                        </button>
-                    </div>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.header-top -->
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="header-bottom__wrapper">
-                        <nav class="header-bottom__menu menu">
-                            <ul class="menu-list">
-                                <li class="menu-item"><a href="#">SEO</a></li>
-                                <li class="menu-item"><a href="#">Дизайн</a></li>
-                                <li class="menu-item"><a href="#">Аналитика</a></li>
-                                <li class="menu-item"><a href="#">Обучение</a></li>
-                                <li class="menu-item"><a href="#">Главная</a></li>
-                            </ul>
-                        </nav>
-                        <!-- /.header-bottom__menu -->
-                        <nav class="header-bottom__menu menu">
-                            <ul class="menu-list">
-                                <li class="menu-item"><a href="#">Услуги</a></li>
-                                <li class="menu-item"><a href="#">Кейсы</a></li>
-                                <li class="menu-item"><a href="#">Компания</a></li>
-                                <li class="menu-item"><a href="#">Статьи</a></li>
-                                <li class="menu-item"><a href="#">Контакты</a></li>
-                            </ul>
-                        </nav>
-                        <!-- /.header-bottom__menu -->
-                    </div>
-                    <!-- /.header-bottom__wrapper -->
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.header-bottom -->
-            <div class="menu-mobile">
-                <div class="container">
-                    <div class="menu-mobile__list menu">
-                        <ul class="menu-list">
-                            <li class="menu-item"><a href="#">Главная</a></li>
-                            <li class="menu-item"><a href="#">SEO</a></li>
-                            <li class="menu-item"><a href="#">Дизайн</a></li>
-                            <li class="menu-item"><a href="#">Аналитика</a></li>
-                            <li class="menu-item"><a href="#">Обучение</a></li>
-                            <li class="menu-item"><a href="#">Услуги</a></li>
-                            <li class="menu-item"><a href="#">Кейсы</a></li>
-                            <li class="menu-item"><a href="#">Компания</a></li>
-                            <li class="menu-item"><a href="#">Статьи</a></li>
-                            <li class="menu-item"><a href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.menu-mobile__list -->
-                    <div class="menu-mobile__footer">
-                        <div class="header-social">
-                            <a href="#" target="_blank" class="header-social__link">
-                                <img src="assets/img/icons/vk_icon.svg" alt="">
-                            </a>
-                            <a href="#" target="_blank" class="header-social__link">
-                                <img src="assets/img/icons/whatsapp_icon.svg" alt="">
-                            </a>
-                        </div>
-                        <a href="tel:+79191557210" class="menu-mobile__tel">+7 919 155 72 10</a>
-                    </div>
-                    <!-- /.menu-mobile__footer -->
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.menu-mobile -->
-        </header>
-        <!-- END header -->
+        @@include('template/header.html')
 
-        <main class="page__content" style="padding-top: 290px">
+        <main class="page__content">
+            <section class="main-screen box-shadow">
+                <div class="container">
+                    <div class="main-screen__wrapper">
+                        <div class="main-screen__content">
+                            <div class="main-screen__subtitle">
+                                <p>
+                                    Продвижение на всех маркетплейсах
+                                    ЭКОлогичными способами!
+                                </p>
+                            </div>
+                            <h1>Продвижение и сопровождение на <span>маркетплейсах</span></h1>
+                            <button class="btn">Заполнить заявку</button>
+                        </div>
+                        <!-- /.main-screen__content -->
+                        <div class="main-screen__images">
+                            <img src="assets/img/infographics/phone_market.png" alt="">
+                        </div>
+                        <!-- /.main-screen__images -->
+                    </div>
+                    <!-- /.main-screen__wrapper -->
+                </div>
+                <!-- /.container -->
+            </section>
+            <!-- /.main-screen -->
+            <section class="ads-service">
+                <div class="container">
+                    <div class="ads-service__wrapper">
+                        <a href="#" class="card-main">
+                            <div class="card-main__content">
+                                <p>Профессиональная настройка SEO</p>
+                            </div>
+                            <!-- /.card-main__content -->
+                            <div class="card-main__image">
+                                <img src="assets/img/infographics/raketa.png" alt="">
+                            </div>
+                            <!-- /.card-main__image -->
+                        </a>
+                        <!-- /.card-main -->
+                        <div class="card-main">
+                            <div class="card-main__content">
+                                <p>Разработка лучших дизайнов</p>
+                            </div>
+                            <!-- /.card-main__content -->
+                            <div class="card-main__image">
+                                <img src="assets/img/infographics/colors.png" alt="">
+                            </div>
+                            <!-- /.card-main__image -->
+                        </div>
+                        <!-- /.card-main -->
+                        <div class="card-main">
+                            <div class="card-main__content">
+                                <p>Полная аналитика, исследование рынка</p>
+                            </div>
+                            <!-- /.card-main__content -->
+                            <div class="card-main__image">
+                                <img src="assets/img/infographics/computer.png" alt="">
+                            </div>
+                            <!-- /.card-main__image -->
+                        </div>
+                        <!-- /.card-main -->
+                        <div class="card-main">
+                            <div class="card-main__content">
+                                <p>Полное сопровождение и продвижение под ключ</p>
+                            </div>
+                            <!-- /.card-main__content -->
+                            <div class="card-main__image">
+                                <img src="assets/img/infographics/money.png" alt="">
+                            </div>
+                            <!-- /.card-main__image -->
+                        </div>
+                        <!-- /.card-main -->
+                    </div>
+                    <!-- /.ads-service__wrapper -->
+                    @@include('template/marketplace.html')
+                </div>
+                <!-- /.container -->
+            </section>
+            <!-- /.ads-service -->
 
         </main>
         <!-- END page__content -->
 
-        <footer class="footer" id="footer">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="footer-top__wrapper">
-                        <div class="footer-top__slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="footer-top__item">
-                                        <div class="footer-top__content">
-                                            <h3>О компании</h3>
-                                            <p>BlackBox - это текст текст текст текст текст текст текст текст текст
-                                                текст текст...</p>
-                                        </div>
-                                        <div class="footer-top__images">
-                                            <img src="assets/img/slider/man.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.swiper-slide -->
-                                <div class="swiper-slide">
-                                    <div class="footer-top__item">
-                                        <div class="footer-top__content">
-                                            <h3>О компании</h3>
-                                            <p>BlackBox - это текст текст текст текст текст текст текст текст текст
-                                                текст текст...</p>
-                                        </div>
-                                        <div class="footer-top__images">
-                                            <img src="assets/img/slider/tel.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.swiper-slide -->
-                                <div class="swiper-slide">
-                                    <div class="footer-top__item">
-                                        <div class="footer-top__content">
-                                            <h3>О компании</h3>
-                                            <p>BlackBox - это текст текст текст текст текст текст текст текст текст
-                                                текст текст...</p>
-                                        </div>
-                                        <div class="footer-top__images">
-                                            <img src="assets/img/slider/man_2.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.swiper-slide -->
-                            </div>
-                            <!-- /.swiper-wrapper -->
-                            <div class="swiper-scrollbar footer-top__scrollbar"></div>
-                        </div>
-
-                        <!-- /.footer-top__slider -->
-                        <button class="swiper-button-prev footer-top__btn footer-top__btn--prev"></button>
-                        <button class="swiper-button-next footer-top__btn footer-top__btn--next"></button>
-                    </div>
-                    <!-- /.footer-top__wrapper -->
-                </div>
-            </div>
-            <!-- /.footer-top -->
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-bottom__wrapper">
-                        <div class="footer-bottom__head">
-                            <a href="#" class="footer-bottom__logo">
-                                <img src="assets/img/logo.png" alt="">
-                            </a>
-                            <!-- /.footer-bottom__logo -->
-                            <div class="footer-bottom__social">
-                                <a href="#" target="_blank"><img src="assets/img/icons/whatsapp_icon_fill.png"
-                                        alt=""></a>
-                                <a href="#" target="_blank"><img src="assets/img/icons/vk_icon_fill.png" alt=""></a>
-                                <a href="#" target="_blank"><img src="assets/img/icons/telegramm_icon_fill.png"
-                                        alt=""></a>
-                            </div>
-                            <!-- /.footer-bottom__social -->
-                        </div>
-                        <div class="footer-bottom__contacts">
-                            <a href="#" target="_blank">
-                                <img src="assets/img/icons/tel.svg" alt="">
-                                <span>+7 919 155 72 10</span>
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="assets/img/icons/email.svg" alt="">
-                                <span>blackbox@mail.ru</span>
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="assets/img/icons/geo.svg" alt="">
-                                <span>г. Уфа, ул. Ленина 70</span>
-                            </a>
-                            <div class="footer-bottom__card">
-                                <img src="assets/img/icons/visa.png" alt="">
-                                <img src="assets/img/icons/mastercart.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.footer-bottom__contacts -->
-                        <nav class="footer-bottom__menu">
-                            <ul class="menu-list">
-                                <li class="menu-item"><a href="#">Главная</a></li>
-                                <li class="menu-item"><a href="#">Статьи</a></li>
-                                <li class="menu-item"><a href="#">SEO</a></li>
-                                <li class="menu-item"><a href="#">Кейсы</a></li>
-                                <li class="menu-item"><a href="#">Обучение</a></li>
-                                <li class="menu-item"><a href="#">Дизайн</a></li>
-                                <li class="menu-item"><a href="#">Услуги</a></li>
-                                <li class="menu-item"><a href="#">Контакты</a></li>
-                                <li class="menu-item"><a href="#">Аналитика</a></li>
-                                <li class="menu-item"><a href="#">Компания</a></li>
-                                <li class="menu-item"><a href="#">Ссылки</a></li>
-                                <li class="menu-item"><a href="#">Под ключ</a></li>
-                            </ul>
-                        </nav>
-                        <!-- /.footer-bottom__menu -->
-                        <div class="footer-bottom__card">
-                            <img src="assets/img/icons/visa.png" alt="">
-                            <img src="assets/img/icons/mastercart.png" alt="">
-                        </div>
-                        <!-- /.footer-bottom__card -->
-                        <div class="footer-bottom__documents">
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Политика конфиденциальности</a>
-                        </div>
-                        <!-- /.footer-bottom__documents -->
-                        <div class="footer-bottom__date">© 2022 «BlackBox»</div>
-                    </div>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.footer-bottom -->
-        </footer>
-        <!-- END footer -->
-
-        <div class="popup" id="mainForm">
-            <div class="popup__content">
-                <div class="popup__body">
-                    <button class="popup__close"></button>
-                </div>
-            </div>
-            <!-- /.popup__content -->
-        </div>
-        <!-- /.popup -->
-    </div>
-    <!-- END page__wrapper -->
-
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.min.js"></script>
+        @@include('template/footer.html')
 </body>
 
 </html>

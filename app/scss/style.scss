@@ -1,23 +1,34 @@
 //* ###### Главный Scss-файл ######
 
 //? ====== Переменные =============================
-@import "_base.scss";
+@import '_base.scss';
 
 //? ====== Обнуление стилей =======================
-@import "_reset.scss";
+@import '_reset.scss';
 
 //? ====== Oбщие параметры ========================
-@import "_site.scss";
+@import '_site.scss';
 
 //? ===== Оcновная сетка ==========================
-@import "_grid.scss";
+@import '_grid.scss';
 
 //? ====== Oбщие стили ============================
-@import "interface/header"; // Шапка сайта
-@import "interface/footer"; // Подвал сайта
+@import 'interface/header'; // Шапка сайта
+@import 'interface/footer'; // Подвал сайта
 
-@import "interface/_button.scss"; // Общии стили кнопок
-@import "interface/_form.scss";   // Общии стили форм
-@import "interface/_popup.scss";  // Общии стили всплывашек
+@import 'interface/_button.scss'; // Общии стили кнопок
+@import 'interface/_form.scss'; // Общии стили форм
+@import 'interface/_popup.scss'; // Общии стили всплывашек
+
+@import 'modules/main_screen'; // Главный экран
+@import 'modules/cards'; // Карточки
+@import 'modules/marketplace'; // магазины
+@import 'modules/free-analysis';
+@import 'modules/info-block';
+@import 'modules/prices';
+@import 'modules/algorithm';
+@import 'modules/faq';
 
 //? ====== Блоки и страницы ======================
+
+@import 'page/ads/services';

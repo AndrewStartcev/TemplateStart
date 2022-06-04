@@ -1,0 +1,19 @@
+.ads-service {
+	padding-bottom: 40px;
+	&__wrapper {
+		padding: 40px 0 50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media (max-width: ($md1+px)) {
+	.ads-service {
+		&__wrapper {
+			justify-content: center;
+			gap: 40px;
+		}
+	}
+}

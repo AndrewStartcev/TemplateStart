@@ -1,0 +1,80 @@
+.free-analysis {
+	padding: 25px 0;
+	background: radial-gradient(26.72% 86.06% at 76.72% 43.18%, rgba(47, 45, 47, 0.2) 0%, rgba(36, 35, 36, 0) 100%)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+		linear-gradient(273.42deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 32.78%),
+		linear-gradient(92.57deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 28.78%), #242324;
+	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
+	color: #ffffff;
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		margin-right: 194px;
+		img {
+			max-width: 330px;
+		}
+	}
+
+	&__content {
+		max-width: 330px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			width: 90%;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+		a,
+		button {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: ($md1+px)) {
+	.free-analysis {
+		&__icon {
+			margin-right: 80px;
+		}
+	}
+}
+@media (max-width: ($md2+px)) {
+	.free-analysis {
+		&__wrapper {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__icon {
+			margin-right: 0px;
+			margin-bottom: 30px;
+			img {
+				max-width: 150px;
+			}
+		}
+
+		&__content {
+			text-align: center;
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				width: 100%;
+			}
+		}
+	}
+}

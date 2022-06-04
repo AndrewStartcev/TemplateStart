@@ -1,0 +1,181 @@
+.faq {
+	padding-bottom: 70px;
+	&__head {
+		display: none;
+	}
+
+	&__card {
+		background: gray url('../img/bg/tile-map-grow.jpg');
+		border-radius: 15px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: stretch;
+		align-items: stretch;
+		&::after {
+			content: '';
+			display: block;
+			width: 587px;
+			height: 80px;
+			position: absolute;
+			left: -10px;
+			top: -20px;
+			background: url('../img/text/blackbox_black.svg') center center / contain no-repeat;
+		}
+		&::before {
+			content: '';
+			display: block;
+			width: 280px;
+			height: 132px;
+			position: absolute;
+			right: 0px;
+			bottom: -10px;
+			background: url('../img/text/faq.svg') center center / contain no-repeat;
+		}
+	}
+
+	&__content {
+		padding: 168px 0px 50px 40px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__item {
+		max-width: 760px;
+		border-radius: 15px;
+		padding: 10px;
+		margin-bottom: 10px;
+		&.js-accordion--open {
+			background: #ffffff;
+			box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	&__header {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		&.js-accordion--open {
+			.faq__icon {
+				background: url('../img/icons/plus_open.svg') center center / contain no-repeat;
+			}
+		}
+	}
+
+	&__icon {
+		flex: 0 0 40px;
+		width: 40px;
+		height: 40px;
+		background: url('../img/icons/plus.svg') center center / contain no-repeat;
+		margin-right: 20px;
+	}
+
+	&__name {
+		max-width: 600px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	&__descr {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		padding-left: 60px;
+		padding-right: 30px;
+		transition: height linear 0.2s, opacity linear 0.2s, padding linear 0.2s;
+		p {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: #000000;
+			opacity: 0.8;
+		}
+		&.js-accordion--open {
+			height: auto;
+			opacity: 1;
+			padding-top: 10px;
+			padding-bottom: 47px;
+		}
+	}
+
+	&__title {
+		padding: 50px 40px 0;
+		font-family: $fontHeading;
+		text-align: right;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 48px;
+	}
+}
+
+@media (max-width: ($md1+px)) {
+	.faq {
+		padding-bottom: 40px;
+		&__head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 25px;
+		}
+		&__btn {
+			padding: 25px;
+			background: #fcfcfc;
+			border-radius: 15px;
+			img {
+				opacity: 0.75;
+			}
+		}
+
+		&__content {
+			padding: 70px 30px 70px 30px;
+		}
+
+		&__title {
+			display: none;
+			&--mobile {
+				width: 50%;
+				padding: 0;
+				display: flex;
+				text-align: left;
+				color: #2f2d2f;
+			}
+		}
+		&__descr {
+			&.js-accordion--open {
+				padding-top: 10px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+@media (max-width: ($md2+px)) {
+	.faq {
+		&__title {
+			font-size: 35px;
+			line-height: 33px;
+		}
+		&__card {
+			&::after {
+				width: 80%;
+			}
+			&::before {
+				width: 160px;
+				height: 60px;
+			}
+		}
+		&__name {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		&__descr {
+			padding-right: 20px;
+			p {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
+}

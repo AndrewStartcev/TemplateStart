@@ -1,0 +1,113 @@
+.info-block {
+	padding: 60px 0;
+	&__card {
+		background: gray url('../img/bg/tile-map-grow.jpg');
+		border-radius: 15px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		&::after {
+			content: '';
+			display: block;
+			width: 217px;
+			height: 70px;
+			background: url('../img/text/info.svg') center center / contain no-repeat;
+			position: absolute;
+			top: -3px;
+			right: -7px;
+		}
+	}
+
+	&__content {
+		margin-right: 70px;
+		padding: 50px 0 75px 30px;
+	}
+
+	&__title {
+		font-family: $fontHeading;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 48px;
+		margin-bottom: 40px;
+	}
+	&__text {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		column-gap: 10px;
+		p {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		opacity: 0.8;
+	}
+
+	&__image {
+		flex: 0 0 auto;
+		max-width: 570px;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+}
+@media (max-width: ($md1+px)) {
+	.info-block {
+		&__content {
+			margin-right: 0px;
+			padding: 40px 30px;
+		}
+		&__text {
+			flex-direction: column;
+		}
+
+		&__image {
+			display: none;
+		}
+	}
+}
+@media (max-width: ($md2+px)) {
+	.info-block {
+		&__card {
+			&::after {
+				width: 176px;
+				height: 56px;
+			}
+		}
+
+		&__content {
+			padding: 30px 20px;
+		}
+
+		&__title {
+			font-size: 35px;
+			line-height: 95%;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 17px;
+			opacity: 0.8;
+			p {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__image {
+			display: none;
+		}
+	}
+}

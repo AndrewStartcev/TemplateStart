@@ -1,0 +1,16 @@
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px 30px;
+	background: #d3b404 linear-gradient(180deg, #d3b404 -23.08%, #faec37 54.27%, #d0af00 126.92%);
+	border-radius: 15px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	transition: all 0.5s ease;
+	&:hover {
+		background: #19efda linear-gradient(180deg, #19efda 0%, #39f9e6 47.92%, #00b4a2 100%);
+	}
+}

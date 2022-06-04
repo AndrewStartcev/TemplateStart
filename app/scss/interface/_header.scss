@@ -288,5 +288,16 @@
 	.menu-mobile {
 		max-width: 100%;
 		height: calc(100vh - 91px);
+		&__tel {
+			margin-left: 20px;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.menu-mobile {
+		&__tel {
+			margin-left: 0px;
+			font-size: 30px;
+		}
 	}
 }
