@@ -31,7 +31,7 @@
 			margin-bottom: 27px;
 			padding-left: 70px;
 			font-weight: 500;
-			font-size: 16px;
+			font-size: 20px;
 			line-height: 95%;
 			position: relative;
 			min-height: 25px;
@@ -97,6 +97,7 @@
 }
 @media (max-width: ($md2+px)) {
 	.algorithm {
+		padding-bottom: 60px;
 		&__card {
 			padding: 60px 21px 34px 30px;
 			flex-direction: column-reverse;
@@ -106,12 +107,13 @@
 		}
 
 		&__content {
-			padding: 0;
+			padding: 0 20px;
 		}
 
 		&__list {
 			li {
 				margin-bottom: 15px;
+				font-size: 16px;
 				&:last-child {
 					margin-bottom: 0;
 				}

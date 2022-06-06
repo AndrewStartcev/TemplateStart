@@ -18,6 +18,16 @@
 			top: -3px;
 			right: -7px;
 		}
+		&::before {
+			content: '';
+			display: block;
+			width: 587px;
+			height: 80px;
+			position: absolute;
+			left: -10px;
+			bottom: -10px;
+			background: url('../img/text/blackbox_black.svg') center center / contain no-repeat;
+		}
 	}
 
 	&__content {
@@ -44,20 +54,24 @@
 			}
 		}
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 17px;
+		font-size: 18px;
+		line-height: 22px;
 		opacity: 0.8;
+		br {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__image {
 		flex: 0 0 auto;
-		max-width: 570px;
+		max-width: 370px;
 		width: 100%;
 		position: relative;
 		z-index: 1;
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
+		transform: translateX(-100px);
 	}
 }
 @media (max-width: ($md1+px)) {
@@ -68,10 +82,26 @@
 		}
 		&__text {
 			flex-direction: column;
+			div {
+				max-width: 210px;
+			}
+			div:last-child {
+				margin-top: 40px;
+				max-width: 100%;
+				display: flex;
+				column-gap: 20px;
+			}
 		}
 
 		&__image {
-			display: none;
+			width: auto;
+			position: absolute;
+			right: 50px;
+			top: 113px;
+			transform: translateX(0);
+			img {
+				max-width: 558px;
+			}
 		}
 	}
 }
@@ -81,6 +111,10 @@
 			&::after {
 				width: 176px;
 				height: 56px;
+			}
+			&::before {
+				width: 80%;
+				bottom: -25px;
 			}
 		}
 
@@ -105,7 +139,57 @@
 				}
 			}
 		}
+		&__image {
+			width: auto;
+			position: absolute;
+			right: 0;
+			top: 93px;
+			transform: translateX(0);
+			img {
+				max-width: 258px;
+			}
+		}
+	}
+}
+@media (max-width: 425px) {
+	.info-block {
+		&__card {
+			&::after {
+				width: 176px;
+				height: 56px;
+			}
+			&::before {
+				width: 80%;
+				bottom: -25px;
+			}
+		}
 
+		&__content {
+			padding: 30px 20px;
+			padding-bottom: 60px;
+			padding-top: 60px;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 17px;
+			opacity: 0.8;
+			div {
+				max-width: 100%;
+				padding: 0;
+				flex-direction: column;
+				&:last-child {
+					margin-top: 0;
+				}
+			}
+			p {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
 		&__image {
 			display: none;
 		}

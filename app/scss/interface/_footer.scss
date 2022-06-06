@@ -317,6 +317,7 @@
 	.footer-top {
 		padding: 70px 0 70px;
 		&__item {
+			transform: translateX(-10px);
 			max-width: 370px;
 			margin: 50px auto;
 			padding-top: 30px;
@@ -341,11 +342,11 @@
 		}
 
 		&__btn--prev {
-			transform: translateX(0px);
+			transform: translateX(-10px);
 		}
 
 		&__btn--next {
-			transform: rotate(-180deg) translateX(0px);
+			transform: rotate(-180deg) translateX(-10px);
 		}
 	}
 }
