@@ -7,6 +7,8 @@
 		font-size: 50px;
 		line-height: 95%;
 		color: #2f2d2f;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__wrapper {
@@ -28,6 +30,10 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-start;
+		transition: all 0.5s ease;
+		&:hover {
+			box-shadow: 0px 0px 150px rgba(62, 255, 236, 0.75), 0px 15px 20px #00c6b2;
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -68,7 +74,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		align-items: flex-end;
-		a {
+		.btn {
 			max-width: 170px;
 			margin-top: auto;
 		}
@@ -149,10 +155,34 @@
 		}
 	}
 }
-@media (max-width: 425px) {
+@media (max-width: 479px) {
 	.porfolit-min {
+		padding-bottom: 0;
+		&__title {
+			font-size: 25px;
+		}
+
+		&__card {
+			padding: 20px 10px;
+			margin-bottom: 15px;
+			&::after {
+				width: 150px;
+				height: 58px;
+				left: -10px;
+				top: -10px;
+				transform: rotate(0deg);
+			}
+		}
+
 		&__image {
-			display: none;
+			img {
+				max-height: 225px;
+				transform: rotate(90deg) translateX(25%) translateY(21px);
+			}
+		}
+
+		&__price {
+			font-size: 25px;
 		}
 	}
 }

@@ -32,7 +32,7 @@
 
 	&__content {
 		margin-right: 70px;
-		padding: 50px 0 75px 30px;
+		padding: 50px 0 95px 30px;
 	}
 
 	&__title {
@@ -54,8 +54,14 @@
 			}
 		}
 		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 16px;
+		line-height: 20px;
+		b,
+		strong {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+		}
 		opacity: 0.8;
 		br {
 			margin-bottom: 20px;
@@ -78,12 +84,14 @@
 	.info-block {
 		&__content {
 			margin-right: 0px;
-			padding: 40px 30px;
+			padding: 60px 30px;
 		}
 		&__text {
 			flex-direction: column;
+			font-size: 16px;
+			padding-bottom: 25px;
 			div {
-				max-width: 210px;
+				max-width: 270px;
 			}
 			div:last-child {
 				margin-top: 40px;
@@ -100,7 +108,7 @@
 			top: 113px;
 			transform: translateX(0);
 			img {
-				max-width: 558px;
+				max-width: 358px;
 			}
 		}
 	}

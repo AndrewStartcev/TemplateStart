@@ -2,13 +2,13 @@
 	overflow: hidden;
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 	}
 
 	&__content {
 		padding: 100px 0;
-		max-width: 630px;
+		max-width: 650px;
 		h1 {
 			font-family: $fontHeading;
 			text-transform: uppercase;
@@ -79,6 +79,7 @@
 
 		&__images {
 			margin-bottom: -20%;
+			margin-left: 0;
 		}
 	}
 }
@@ -102,14 +103,22 @@
 		}
 	}
 }
-@media (max-width: 420px) {
+@media (max-width: 479px) {
 	.main-screen {
 		&__content {
 			h1 {
-				font-size: 30px;
+				font-size: 33px;
 				span {
-					font-size: 40px;
+					font-size: 46px;
 				}
+			}
+		}
+
+		&__images {
+			margin-bottom: -15%;
+			text-align: center;
+			img {
+				width: 60%;
 			}
 		}
 	}

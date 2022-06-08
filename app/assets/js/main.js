@@ -16,7 +16,20 @@ $('.prices__tab').click(function (e) {
     $(this).addClass('active')
     $(id).addClass('active')
 
-})
+});
+
+const header = document.querySelector(".header");
+const mainBlock = document.querySelector(".main").clientHeight;
+console.log(mainBlock)
+
+windows.addEventListener('scroll', function () {
+    console.log(mainBlock)
+    if (window.scrollY > Number(mainBlock)) {
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    }
+});
 
 // ======== Маска для телефона ===============
 document.addEventListener("DOMContentLoaded", function () {
