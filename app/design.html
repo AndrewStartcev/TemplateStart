@@ -1,345 +1,80 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('template/system/head.html')
+@@include('template/system/header.html')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Продвижение и сопровождение на маркетплейсах</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/style.min.css?ver=1.2" />
-</head>
+<main class="page__content">
+    @@include('template/main.html', {
+    "class": 'box-shadow',
+    "subtitle": "Поможем вывести карточки товаров в ТОП по максимальному количеству запросов",
+    "title": "Оформление карточек на маркетплейсах",
+    "img": "assets/img/infographics/colors_main.png",
+    })
 
-<body class="page" id="top">
-    <div class="page__wrapper">
-        @@include('template/header.html')
-
-        <main class="page__content">
-            <section class="main main-screen box-shadow">
-                <div class="container">
-                    <div class="main-screen__wrapper">
-                        <div class="main-screen__content">
-                            <div class="main-screen__subtitle">
-                                <p>
-                                    Поможем вывести карточки товаров в ТОП
-                                    по максимальному количеству запросов
-                                </p>
-                            </div>
-                            <h1>ОФОРМЛЕНИЕ КАРТОЧЕК НА МАРКЕТПЛЕЙСАХ</h1>
-                            <button class="btn">Заполнить заявку</button>
-                        </div>
-                        <!-- /.main-screen__content -->
-                        <div class="main-screen__images">
-                            <img src="assets/img/infographics/colors_main.png" alt="">
-                        </div>
-                        <!-- /.main-screen__images -->
+    <section class="porfolit-min">
+        <div class="container">
+            <h2 class="porfolit-min__title">НАШИ <br> РАБОТЫ</h2>
+            <!-- /.porfolit-min__title -->
+            <div class="porfolit-min__wrapper">
+                <a href="#" class="porfolit-min__card">
+                    <span class="porfolit-min__image">
+                        <img src="assets/img/case/luxvisage_xxl_mascara 2.png" alt="">
+                    </span>
+                    <!-- /.porfolit-min__image -->
+                    <span class="porfolit-min__content">
+                        <p class="porfolit-min__price">2500000₽</p>
+                        <p class="porfolit-min__date">в месяц</p>
+                        <h3 class="porfolit-min__name">Тушь для ресниц</h3>
+                        <span class="btn">Подробнее</span>
+                    </span>
+                    <!-- /.porfolit-min__content -->
+                </a>
+                <!-- /.porfolit-min__card -->
+                <a href="#" class="porfolit-min__card">
+                    <div class="porfolit-min__image">
+                        <img src="assets/img/case/shampun_keratin_1000 3.png" alt="">
                     </div>
-                    <!-- /.main-screen__wrapper -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.main-screen -->
-
-            <section class="porfolit-min">
-                <div class="container">
-                    <h2 class="porfolit-min__title">НАШИ <br> РАБОТЫ</h2>
-                    <!-- /.porfolit-min__title -->
-                    <div class="porfolit-min__wrapper">
-                        <a href="#" class="porfolit-min__card">
-                            <span class="porfolit-min__image">
-                                <img src="assets/img/case/luxvisage_xxl_mascara 2.png" alt="">
-                            </span>
-                            <!-- /.porfolit-min__image -->
-                            <span class="porfolit-min__content">
-                                <p class="porfolit-min__price">2500000₽</p>
-                                <p class="porfolit-min__date">в месяц</p>
-                                <h3 class="porfolit-min__name">Тушь для ресниц</h3>
-                                <span class="btn">Подробнее</span>
-                            </span>
-                            <!-- /.porfolit-min__content -->
-                        </a>
-                        <!-- /.porfolit-min__card -->
-                        <a href="#" class="porfolit-min__card">
-                            <div class="porfolit-min__image">
-                                <img src="assets/img/case/shampun_keratin_1000 3.png" alt="">
-                            </div>
-                            <!-- /.porfolit-min__image -->
-                            <div class="porfolit-min__content">
-                                <p class="porfolit-min__price">1000000₽</p>
-                                <p class="porfolit-min__date">в месяц</p>
-                                <h3 class="porfolit-min__name">Шампунь кератин</h3>
-                                <span class="btn">Подробнее</span>
-                            </div>
-                            <!-- /.porfolit-min__content -->
-                        </a>
-                        <!-- /.porfolit-min__card -->
-                        <a href="#" class="porfolit-min__card">
-                            <div class="porfolit-min__image">
-                                <img src="assets/img/case/vitex.png" alt="">
-                            </div>
-                            <!-- /.porfolit-min__image -->
-                            <div class="porfolit-min__content">
-                                <p class="porfolit-min__price">970000₽</p>
-                                <p class="porfolit-min__date">в месяц</p>
-                                <h3 class="porfolit-min__name">Крем массажный</h3>
-                                <span class="btn">Подробнее</span>
-                            </div>
-                            <!-- /.porfolit-min__content -->
-                        </a>
-                        <!-- /.porfolit-min__card -->
+                    <!-- /.porfolit-min__image -->
+                    <div class="porfolit-min__content">
+                        <p class="porfolit-min__price">1000000₽</p>
+                        <p class="porfolit-min__date">в месяц</p>
+                        <h3 class="porfolit-min__name">Шампунь кератин</h3>
+                        <span class="btn">Подробнее</span>
                     </div>
-                    <!-- /.porfolit-min__wrapper -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.porfolit-min -->
-
-
-            <section class="info-block">
-                <div class="container">
-                    <div class="info-block__card">
-                        <div class="info-block__content">
-                            <h2 class="info-block__title">ДИЗАЙН <br> BLACKBOX</h2>
-                            <div class="info-block__text">
-                                <div>
-                                    <p>Главная цель дизайна – <b>привлечь внимание потенциального покупателя</b>,
-                                        замотивировать перейти в карточку товара и побудить
-                                        к покупке.</p>
-                                    <p>Наша команда поможет создать <b>запоминающийся фото и видео</b> контент,
-                                        продемонстрировать ценность товара, показывать товар в
-                                        действии и выделиться на фоне конкурентов.</p>
-                                </div>
-                                <div>
-                                    <p><b>Единственная возможность контакта с покупателем на
-                                            маркетплейсе</b> – это
-                                        карточка
-                                        товара. Продвижение карточки товара в Топ
-                                        не реализовать без уникального визуала.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.info-block__content -->
-                        <div class="info-block__image">
-                            <img src="assets/img/infographics/pazle_main.png" alt="">
-                        </div>
-                        <!-- /.info-block__image -->
+                    <!-- /.porfolit-min__content -->
+                </a>
+                <!-- /.porfolit-min__card -->
+                <a href="#" class="porfolit-min__card">
+                    <div class="porfolit-min__image">
+                        <img src="assets/img/case/vitex.png" alt="">
                     </div>
-                    <!-- /.info-block__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.info-block -->
-
-            <section class="prices">
-                <div class="container">
-                    <h2 class="prices__title">ТАРИФЫ ДИЗАЙН</h2>
-                    <div class="prices__head">
-                        <a href="#start" class="prices__tab active">WHITE</a>
-                        <a href="#buisness" class="prices__tab">GREEN</a>
-                        <a href="#premium" class="prices__tab">GOLD</a>
+                    <!-- /.porfolit-min__image -->
+                    <div class="porfolit-min__content">
+                        <p class="porfolit-min__price">970000₽</p>
+                        <p class="porfolit-min__date">в месяц</p>
+                        <h3 class="porfolit-min__name">Крем массажный</h3>
+                        <span class="btn">Подробнее</span>
                     </div>
-                    <div class="prices__wrapper">
-                        <div class="prices__item active" id="start">
-                            <div class="prices__marker"><img src="assets/img/text/DESIGN.svg" alt=""></div>
-                            <h3 class="prices__name">WHITE</h3>
-                            <ul class="prices__list">
-                                <li>Обложка с продающим дизайном</li>
-                                <li>2 картинки с уникальным дизайном</li>
-                                <li>Обработка фото и инфографики</li>
-                                <li>Фото распокованного
-                                    товара</li>
-                                <li class="no">Видео 360 градусов</li>
-                                <li class="no">Полный видео обзор товара с длительность более 1 минуты</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">990₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/color.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                        <div class="prices__item" id="buisness">
-                            <div class="prices__marker"><img src="assets/img/text/DESIGN.svg" alt=""></div>
-                            <h3 class="prices__name">GREEN</h3>
-                            <ul class="prices__list">
-                                <li>Обложка с продающим дизайном</li>
-                                <li>4 картинки с уникальным дизайном</li>
-                                <li>Обработка фото и инфографики</li>
-                                <li>Фото распокованного
-                                    товара</li>
-                                <li>Видео 360 градусов</li>
-                                <li class="no">Полный видео обзор товара с длительность более 1 минуты</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">2990₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/color.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                        <div class="prices__item" id="premium">
-                            <div class="prices__marker"><img src="assets/img/text/DESIGN.svg" alt=""></div>
-                            <h3 class="prices__name">GOLD</h3>
-                            <ul class="prices__list">
-                                <li>Обложка с продающим дизайном</li>
-                                <li>5 картинки с уникальным дизайном</li>
-                                <li>Обработка фото и инфографики</li>
-                                <li>Фото распокованного
-                                    товара</li>
-                                <li>Видео 360 градусов</li>
-                                <li>Полный видео обзор товара с длительность более 1 минуты</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">5990₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/color.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                    </div>
-                    @@include('template/marketplace.html')
-                </div>
-            </section>
+                    <!-- /.porfolit-min__content -->
+                </a>
+                <!-- /.porfolit-min__card -->
+            </div>
+            <!-- /.porfolit-min__wrapper -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.porfolit-min -->
 
-            <section class="algorithm">
-                <div class="container">
-                    <div class="algorithm__card">
-                        <div class="algorithm__content">
-                            <ul class="algorithm__list">
-                                <li>Анализируем ваши карточки товаров</li>
-                                <li>Анализируем конкурентов</li>
-                                <li>Разрабатываем стратегию SEO-продвижения</li>
-                                <li>Собираем семантическое ядро</li>
-                                <li>Вносим ключи текстового контента в карточке товара</li>
-                                <li>Отслеживаем и оптимизируем позиции по ключам</li>
-                                <li>Предоставляем отчётность по каждой карточке товара</li>
-                            </ul>
-                        </div>
-                        <!-- /.algorithm__content -->
-                        <div class="algorithm__images">
-                            <h2 class="algorithm__title">АЛГОРИТМ <br> НАШЕЙ <br> РАБОТЫ</h2>
-                            <img src="assets/img/infographics/tablet.png" alt="">
-                        </div>
-                        <!-- /.algorithm__images -->
-                    </div>
-                    <!-- /.algorithm__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.algorithm -->
+    @@include('template/info-block.html', {
+    "title": "дизайн <br> blackbox",
+    "img": "assets/img/infographics/pazle_main.png",
+    })
 
-            <section class="faq">
-                <div class="container">
-                    <div class="faq__head">
-                        <h2 class="faq__title faq__title--mobile">Частые вопросы</h2>
-                        <button class="faq__btn">
-                            <img src="assets/img/icons/chat.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="faq__card">
-                        <div class="faq__content" data-block="accordion" id="faq-accordion">
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Работает ли SEO на маркетплейсах?
-                                    </h3>
+    @@include('template/price.html')
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Вы помогаете выбирать SKU для SEO-продвижения?
-                                    </h3>
+    @@include('template/algorithm.html')
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Пишете ли вы описание карточки товара в рамках SEO-продвижения?
-                                    </h3>
+    @@include('template/faq.html')
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Делаете ли вы SEO-аудит?
-                                    </h3>
+</main>
+<!-- END page__content -->
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                        </div>
-                        <!-- /.faq__content -->
-                        <div class="faq__title">
-                            <h2>ЧАСТО <br> ЗАДАВАЕМЫЕ <br> ВОПРОСЫ</h2>
-                        </div>
-                        <!-- /.faq__title -->
-                    </div>
-                    <!-- /.faq__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.faq -->
-
-        </main>
-        <!-- END page__content -->
-
-        @@include('template/footer.html')
-</body>
-
-</html>
+@@include('template/system/footer.html')

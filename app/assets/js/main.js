@@ -15,21 +15,40 @@ $('.prices__tab').click(function (e) {
     let id = $(this).attr('href')
     $(this).addClass('active')
     $(id).addClass('active')
+    sizeContainerPrice()
 
 });
 
 const header = document.querySelector(".header");
 const mainBlock = document.querySelector(".main").clientHeight;
-console.log(mainBlock)
 
-windows.addEventListener('scroll', function () {
-    console.log(mainBlock)
+window.addEventListener('scroll', function () {
     if (window.scrollY > Number(mainBlock)) {
         header.classList.add("active");
     } else {
         header.classList.remove("active");
     }
 });
+
+
+$(window).resize(sizeContainerPrice())
+$(document).ready(sizeContainerPrice())
+$('.prices__controller button').click(function () {
+    $('.active .prices__row').toggleClass('open')
+    $(this).parents('.prices__controller').toggleClass('open')
+})
+
+function sizeContainerPrice() {
+    let PriceBigList1 = $('.active .prices__list li:nth-child(1)').height()
+    let PriceBigList2 = $('.active .prices__list li:nth-child(2)').height()
+    let PriceBigList3 = $('.active .prices__list li:nth-child(3)').height()
+    let PriceBigList4 = $('.active .prices__list li:nth-child(4)').height()
+    if ($(window).width() <= 1199) {
+        $('.active .prices__row').css('max-height', (PriceBigList1 + PriceBigList2 + PriceBigList3 + PriceBigList3) + (27 * 3) + 'px')
+    } else {
+        $('.active .prices__row').css('max-height', '100%')
+    }
+}
 
 // ======== Маска для телефона ===============
 document.addEventListener("DOMContentLoaded", function () {

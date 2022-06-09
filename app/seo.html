@@ -1,308 +1,48 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('template/system/head.html')
+@@include('template/system/header.html')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Продвижение и сопровождение на маркетплейсах</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/style.min.css" />
-</head>
+<main class="page__content">
 
-<body class="page" id="top">
-    <div class="page__wrapper">
-        @@include('template/header.html')
+    @@include('template/main.html', {
+    "class": '',
+    "subtitle": "Поможем вывести карточки товаров в ТОП по максимальному количеству запросов",
+    "title": "<span>SEO</span> на <br> маркетплейсах",
+    "img": "assets/img/infographics/raketa_main.png",
+    })
 
-        <main class="page__content">
-            <section class="main main-screen">
-                <div class="container">
-                    <div class="main-screen__wrapper">
-                        <div class="main-screen__content">
-                            <div class="main-screen__subtitle">
-                                <p>
-                                    Поможем вывести карточки товаров в ТОП
-                                    по максимальному количеству запросов
-                                </p>
-                            </div>
-                            <h1><span>SEO</span> на <br> маркетплейсах</h1>
-                            <button class="btn">Заполнить заявку</button>
-                        </div>
-                        <!-- /.main-screen__content -->
-                        <div class="main-screen__images">
-                            <img src="assets/img/infographics/raketa_main.png" alt="">
-                        </div>
-                        <!-- /.main-screen__images -->
-                    </div>
-                    <!-- /.main-screen__wrapper -->
+    <section class="free-analysis">
+        <div class="container">
+            <div class="free-analysis__wrapper">
+                <div class="free-analysis__icon">
+                    <img src="assets/img/infographics/info.png" alt="">
                 </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.main-screen -->
-
-            <section class="free-analysis">
-                <div class="container">
-                    <div class="free-analysis__wrapper">
-                        <div class="free-analysis__icon">
-                            <img src="assets/img/infographics/info.png" alt="">
-                        </div>
-                        <!-- /.free__icon -->
-                        <div class="free-analysis__content">
-                            <h2>Бесплатный анализ SEO
-                                текст карточки (1 SKU)</h2>
-                            <p>Ограниченная временная акция(бонус) при оформлении заявки на сайте прямо сейчас</p>
-                            <button class="btn">Заполнить</button>
-                        </div>
-                        <!-- /.free__content -->
-                    </div>
-                    <!-- /.free__wrapper -->
+                <!-- /.free__icon -->
+                <div class="free-analysis__content">
+                    <h2>Бесплатный анализ SEO
+                        текст карточки (1 SKU)</h2>
+                    <p>Ограниченная временная акция(бонус) при оформлении заявки на сайте прямо сейчас</p>
+                    <button class="btn">Заполнить</button>
                 </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.free -->
+                <!-- /.free__content -->
+            </div>
+            <!-- /.free__wrapper -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.free -->
 
-            <section class="info-block">
-                <div class="container">
-                    <div class="info-block__card">
-                        <div class="info-block__content">
-                            <h2 class="info-block__title">В ЧЕМ СЕКРЕТ<br>НАШЕГО SEO?</h2>
-                            <div class="info-block__text">
-                                <div>
-                                    <p>Мы предлагаем своим клиентам <b>уникальное продающее описание товара</b> с
-                                        использованием ключевых запросов. Главная цель –
-                                        <b>гарантированный рост</b> продаж в краткосрочной и долгосрочной перспективе.
-                                    </p>
-                                </div>
-                                <div>
-                                    <p>Правильная оптимизация поможет <b>выделиться среди конкурентов</b> и найти Ваш
-                                        товар потенциальному покупателю.
-                                    </p>
-                                    <p>Этот инструмент дает огромное преимущество: товар может отобразиться не только
-                                        во внутренней выдаче конкретного маркетплейса, но и на первых страницах Яндекса
-                                        и Google</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.info-block__content -->
-                        <div class="info-block__image">
-                            <img src="assets/img/infographics/computer_main.png" alt="">
-                        </div>
-                        <!-- /.info-block__image -->
-                    </div>
-                    <!-- /.info-block__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.info-block -->
+    @@include('template/info-block.html', {
+    "title": "в чем секрет<br>нашего seo?",
+    "img": "assets/img/infographics/computer_main.png",
+    })
 
-            <section class="prices">
-                <div class="container">
-                    <h2 class="prices__title">ТАРИФЫ SEO</h2>
-                    <div class="prices__head">
-                        <a href="#start" class="prices__tab active">START</a>
-                        <a href="#buisness" class="prices__tab">BUISNESS</a>
-                        <a href="#premium" class="prices__tab">PREMIUM</a>
-                    </div>
-                    <div class="prices__wrapper">
-                        <div class="prices__item active" id="start">
-                            <div class="prices__marker"><img src="assets/img/text/seo.svg" alt=""></div>
-                            <h3 class="prices__name">START</h3>
-                            <ul class="prices__list">
-                                <li>Заполнение поля бренда, комплектации, названия</li>
-                                <li>Заполнение дополнительных полей</li>
-                                <li>Фотография-заглушка</li>
-                                <li class="no">Сбор семантического ядра для поисковых систем Яндекс, Гугл</li>
-                                <li class="no">Рекомендованный ТЗ на дизайн</li>
-                                <li class="no">Предложения на прописание "Рекомендаций" (при возможности)</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">300₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/raketa.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                        <div class="prices__item" id="buisness">
-                            <div class="prices__marker"><img src="assets/img/text/seo.svg" alt=""></div>
-                            <h3 class="prices__name">BUISNESS</h3>
-                            <ul class="prices__list">
-                                <li>Заполнение поля "Наименование" по ключевым запросам</li>
-                                <li>Заполнение поля "Описание" 800+ символов, подбор ЦА по предмету</li>
-                                <li>Полное заполнение дополнительных полей</li>
-                                <li>Сбор семантического ядра для поисковых систем Яндекс, Гугл</li>
-                                <li class="no">Рекомендованный ТЗ на дизайн</li>
-                                <li class="no">Предложения на прописание "Рекомендаций" (при возможности)</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">700₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/raketa.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                        <div class="prices__item" id="premium">
-                            <div class="prices__marker"><img src="assets/img/text/seo.svg" alt=""></div>
-                            <h3 class="prices__name">PREMIUM</h3>
-                            <ul class="prices__list">
-                                <li>Заполнение поля "Наименование" по ключевым запросам</li>
-                                <li>Заполнение поля "Описание", проведение SWOT-анализа, подбор ЦА, конкурентная
-                                    отслойка</li>
-                                <li>Полное заполнение дополнительных полей</li>
-                                <li>Сбор семантического ядра для поисковых систем Яндекс, Гугл</li>
-                                <li>Рекомендованный ТЗ на дизайн</li>
-                                <li>Предложения на прописание "Рекомендаций" (при возможности)</li>
-                            </ul>
-                            <div class="prices__footer">
-                                <div class="prices__price">1500₽</div>
-                                <div class="prices__count">за 1 шт.</div>
-                                <button class="btn prices__btn">Заказать</button>
-                            </div>
-                            <div class="prices__icon">
-                                <img src="assets/img/text/raketa.png" alt="">
-                            </div>
-                        </div>
-                        <!-- /.prices__item -->
-                    </div>
-                    @@include('template/marketplace.html')
-                </div>
-            </section>
+    @@include('template/price.html')
 
-            <section class="algorithm">
-                <div class="container">
-                    <div class="algorithm__card">
-                        <div class="algorithm__content">
-                            <ul class="algorithm__list">
-                                <li>Анализируем ваши карточки товаров</li>
-                                <li>Анализируем конкурентов</li>
-                                <li>Разрабатываем стратегию SEO-продвижения</li>
-                                <li>Собираем семантическое ядро</li>
-                                <li>Вносим ключи текстового контента в карточке товара</li>
-                                <li>Отслеживаем и оптимизируем позиции по ключам</li>
-                                <li>Предоставляем отчётность по каждой карточке товара</li>
-                            </ul>
-                        </div>
-                        <!-- /.algorithm__content -->
-                        <div class="algorithm__images">
-                            <h2 class="algorithm__title">АЛГОРИТМ <br> НАШЕЙ <br> РАБОТЫ</h2>
-                            <img src="assets/img/infographics/tablet.png" alt="">
-                        </div>
-                        <!-- /.algorithm__images -->
-                    </div>
-                    <!-- /.algorithm__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.algorithm -->
+    @@include('template/algorithm.html')
 
-            <section class="faq">
-                <div class="container">
-                    <div class="faq__head">
-                        <h2 class="faq__title faq__title--mobile">Частые вопросы</h2>
-                        <button class="faq__btn">
-                            <img src="assets/img/icons/chat.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="faq__card">
-                        <div class="faq__content" data-block="accordion" id="faq-accordion">
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Работает ли SEO на маркетплейсах?
-                                    </h3>
+    @@include('template/faq.html')
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Вы помогаете выбирать SKU для SEO-продвижения?
-                                    </h3>
+</main>
+<!-- END page__content -->
 
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Пишете ли вы описание карточки товара в рамках SEO-продвижения?
-                                    </h3>
-
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                            <div class="faq__item accordion__item">
-                                <div class="faq__header accordion__title">
-                                    <button class="faq__icon"></button>
-                                    <h3 class="faq__name">
-                                        Делаете ли вы SEO-аудит?
-                                    </h3>
-
-                                </div>
-                                <div class="faq__descr accordion__content">
-                                    <p>
-                                        Да, мы делаем бесплатный SEO-аудит: анализируем вашу карточку товара на наличие
-                                        и заполнение параметров, необходимых для
-                                        повышения в поиске, анализируем ваших конкурентов. Итог нашей работы –
-                                        практические рекомендации, которые помогут
-                                        поднять ваши товары в топ.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.faq__item -->
-                        </div>
-                        <!-- /.faq__content -->
-                        <div class="faq__title">
-                            <h2>ЧАСТО <br> ЗАДАВАЕМЫЕ <br> ВОПРОСЫ</h2>
-                        </div>
-                        <!-- /.faq__title -->
-                    </div>
-                    <!-- /.faq__card -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.faq -->
-
-        </main>
-        <!-- END page__content -->
-
-        @@include('template/footer.html')
-</body>
-
-</html>
+@@include('template/system/footer.html')

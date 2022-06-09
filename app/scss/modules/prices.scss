@@ -2,17 +2,21 @@
 	padding-bottom: 60px;
 	&__title {
 		font-family: $fontHeading;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		font-weight: 400;
 		font-size: 50px;
 		line-height: 95%;
 		color: #2f2d2f;
+		text-transform: uppercase;
 	}
 	&__head {
 		display: none;
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 45px;
+		margin-bottom: 25px;
+		&--big {
+			display: flex;
+		}
 	}
 
 	&__tab {
@@ -23,6 +27,7 @@
 		color: #000000;
 		opacity: 0.5;
 		margin-right: 40px;
+		text-transform: uppercase;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -66,6 +71,22 @@
 			transform: rotate(-90deg);
 			background: url('../img/text/blackbox_white.svg') center center / contain no-repeat;
 		}
+		&--big {
+			margin-right: 0;
+			display: none;
+			padding-bottom: 74px;
+			&.active {
+				display: flex;
+			}
+			&::after {
+				max-width: 100%;
+				width: 800px;
+				height: 124px;
+				transform: rotate(0deg);
+				bottom: -10px;
+				left: -10px;
+			}
+		}
 	}
 
 	&__marker {
@@ -73,8 +94,13 @@
 		top: -10px;
 		left: -10px;
 		width: 100%;
+		min-height: 66px;
 		img {
 			max-width: 100%;
+		}
+		&--big {
+			img {
+			}
 		}
 	}
 
@@ -85,12 +111,27 @@
 		font-size: 50px;
 		line-height: 95%;
 		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		column-gap: 70px;
+		.prices__list {
+			flex: 0 0 45%;
+		}
+		.prices__list li {
+			font-weight: 700;
+			line-height: 95%;
+		}
 	}
 
 	&__list {
 		position: relative;
 		z-index: 1;
 		li {
+			min-height: 26px;
 			margin-bottom: 27px;
 			padding-left: 70px;
 			font-weight: 500;
@@ -125,11 +166,21 @@
 				margin-bottom: 0;
 			}
 			&.no {
+				color: rgba(#fff, 0.6);
 				&::before {
 					background: #9a9a94;
 				}
 				&::after {
 					left: 0;
+				}
+			}
+			&.from {
+				&::before {
+					background: #9a9a94;
+					background: linear-gradient(90deg, #feed21 44.79%, #9a9a94 49.48%);
+				}
+				&::after {
+					left: 13px;
 				}
 			}
 		}
@@ -151,13 +202,16 @@
 		font-family: $fontHeading;
 		font-size: 50px;
 		line-height: 48px;
-		margin-bottom: 10px;
 	}
 
 	&__count {
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 95%;
+		margin-top: 10px;
+	}
+	&__controller {
+		display: none;
 	}
 
 	&__btn {
@@ -173,6 +227,14 @@
 			width: 145px;
 			height: 145px;
 			object-fit: contain;
+		}
+		&--big {
+			bottom: -30px;
+			right: -30px;
+			img {
+				height: 239px;
+				width: 239px;
+			}
 		}
 	}
 }
@@ -205,6 +267,93 @@
 			}
 			&.active {
 				display: flex;
+			}
+			&--big {
+				margin-right: 0;
+				display: none;
+				padding-bottom: 74px;
+				&.active {
+					display: flex;
+				}
+				&::after {
+					height: 50px;
+					width: 373px;
+					left: -165px;
+					bottom: 150px;
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		&__row {
+			overflow: hidden;
+			flex-direction: column;
+			&.open {
+				max-height: 100% !important;
+			}
+			.prices__list:first-child {
+				margin-bottom: 20px;
+			}
+		}
+		&__controller {
+			padding-top: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			p {
+				margin-bottom: 10px;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 95%;
+			}
+			button {
+				width: 50px;
+				height: 50px;
+				border-radius: 100%;
+				box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.15);
+				background: #ffffff;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&::after {
+					background: url('../img/icons/plus__dark.svg') center center / 30px 30px no-repeat;
+					content: '';
+					display: block;
+					width: 30px;
+					height: 30px;
+					position: relative;
+					z-index: 1;
+				}
+				&::before {
+					content: '';
+					display: block;
+					width: 350px;
+					height: 6px;
+					background: #ffffff;
+					border-radius: 15px;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.off {
+				display: none;
+			}
+			&.open {
+				.off {
+					display: block;
+				}
+				.on {
+					display: none;
+				}
+				button {
+					&::after {
+						background: url('../img/icons/plus_open_dark.svg') center center / contain no-repeat;
+					}
+				}
 			}
 		}
 
@@ -257,6 +406,13 @@
 		}
 		&__item {
 			padding: 20px 10px;
+		}
+		&__controller {
+			button {
+				&::before {
+					width: 270px;
+				}
+			}
 		}
 		&__name {
 			font-size: 40px;

@@ -17,6 +17,7 @@
 			position: absolute;
 			top: -3px;
 			right: -7px;
+			opacity: 0.75;
 		}
 		&::before {
 			content: '';
@@ -27,6 +28,7 @@
 			left: -10px;
 			bottom: -10px;
 			background: url('../img/text/blackbox_black.svg') center center / contain no-repeat;
+			opacity: 0.75;
 		}
 	}
 
@@ -41,6 +43,7 @@
 		font-size: 50px;
 		line-height: 48px;
 		margin-bottom: 40px;
+		text-transform: uppercase;
 	}
 	&__text {
 		display: flex;
